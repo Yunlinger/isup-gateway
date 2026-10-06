@@ -1,0 +1,41 @@
+{
+  "source": {
+    "api_base": "http://127.0.0.1:8088",
+    "username": "isup_gateway",
+    "password": "REPLACE_WITH_SOURCE_PASSWORD",
+    "device_id": "CAMERA001",
+    "channel": 1,
+    "stream_type": 1,
+    "rtsp_base": "rtsp://127.0.0.1:8554",
+    "ffmpeg": "ffmpeg"
+  },
+  "targets": [
+    {
+      "label": "platform-a",
+      "enabled": true,
+      "host": "192.0.2.10",
+      "port": 7661,
+      "device_id": "GWCAMERA001",
+      "device_name": "Gateway camera A",
+      "isup_key": "REPLACE_WITH_PLATFORM_A_KEY"
+    },
+    {
+      "label": "platform-b",
+      "enabled": true,
+      "host": "192.0.2.20",
+      "port": 7661,
+      "device_id": "GWCAMERA002",
+      "device_name": "Gateway camera B",
+      "isup_key": "REPLACE_WITH_PLATFORM_B_KEY"
+    },
+    {
+      "label": "platform-c",
+      "enabled": true,
+      "host": "192.0.2.30",
+      "port": 7661,
+      "device_id": "GWCAMERA003",
+      "device_name": "Gateway camera C",
+      "isup_key": "REPLACE_WITH_PLATFORM_C_KEY"
+    }
+  ]
+}

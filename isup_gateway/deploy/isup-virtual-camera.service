@@ -1,0 +1,22 @@
+[Unit]
+Description=ISUP 5 virtual camera
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/isup-virtual-camera
+EnvironmentFile=/root/isup-virtual-camera/camera.env
+ExecStart=/root/isup-virtual-camera/.venv/bin/python -u -m isup_gateway.virtual_camera --host ${ISUP_HOST} --port ${ISUP_PORT} --device-id ${ISUP_DEVICE_ID} --video ${ISUP_VIDEO}
+Restart=on-failure
+RestartSec=3
+KillSignal=SIGINT
+TimeoutStopSec=15
+UMask=0077
+NoNewPrivileges=true
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

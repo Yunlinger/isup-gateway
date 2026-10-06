@@ -1,0 +1,20 @@
+logLevel: info
+api: false
+metrics: false
+pprof: false
+playback: false
+rtmp: false
+hls: false
+srt: false
+rtsp: true
+rtspAddress: 127.0.0.1:18554
+rtspTransports: [tcp]
+webrtc: true
+webrtcAddress: 127.0.0.1:18889
+webrtcLocalUDPAddress: :8189
+webrtcLocalTCPAddress: :7667
+webrtcAdditionalHosts: [192.0.2.10]
+webrtcAllowOrigins: ['*']
+paths:
+  all:
+    source: publisher

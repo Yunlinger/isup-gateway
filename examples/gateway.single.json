@@ -1,0 +1,23 @@
+{
+  "source": {
+    "api_base": "http://127.0.0.1:8088",
+    "username": "isup_gateway",
+    "password": "REPLACE_WITH_SOURCE_PASSWORD",
+    "device_id": "CAMERA001",
+    "channel": 1,
+    "stream_type": 1,
+    "rtsp_base": "rtsp://127.0.0.1:8554",
+    "ffmpeg": "ffmpeg"
+  },
+  "targets": [
+    {
+      "label": "platform-a",
+      "enabled": true,
+      "host": "192.0.2.10",
+      "port": 7661,
+      "device_id": "GWCAMERA001",
+      "device_name": "Gateway camera A",
+      "isup_key": "REPLACE_WITH_PLATFORM_A_KEY"
+    }
+  ]
+}
